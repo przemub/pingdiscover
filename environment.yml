@@ -1,0 +1,8 @@
+name: pingdiscover
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8.10
+  - pip=21.1
+  - pip:
+    - aioping==0.3.1
