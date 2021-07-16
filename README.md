@@ -40,25 +40,26 @@ Scanned subnet 192.168.1.0/24 in 9.14 s. 2 hosts are up, 252 hosts are down.
 
 ## Run
 
-You can run pingdiscover.py using your system interpreter (`python pingdiscover.py`) once you install aioping (`pip install aioping`).
+You can run pingdiscover.py using your system interpreter (`python pingdiscover.py`) once you install the requirements (`make system`).
+
 There are also several virtual environments you can use.
 
 ### venv
 ```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install aioping
+make venv
 python pingdiscover.py --help
+exit # once you're done
 ```
 
 ### Docker
 ```bash
-docker build -t pingdiscover .
+make docker
 docker run --rm -it pingdiscover --help
 ```
 
 ### Conda
 ```bash
-conda env create -f environment.yml
-conda run -n pingdiscover python pingdiscover.py --help
+make conda
+python pingdiscover.py --help
+exit # once you're done
 ```
