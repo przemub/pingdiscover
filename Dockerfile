@@ -8,7 +8,5 @@ WORKDIR /usr/src/app
 COPY . .
 RUN conda env create -f environment.yml
 
-ENV PYTHONUNBUFFERED 1
-
-ENTRYPOINT ["conda", "run", "-n", "pingdiscover", "python", "pingdiscover.py"]
+ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "pingdiscover", "python", "-u", "pingdiscover.py"]
 

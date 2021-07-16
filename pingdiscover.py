@@ -60,7 +60,7 @@ def main():
         timed_out_count = sum(1 for result in results if result is False)
 
         print(
-            f"Scanned subnet {args.subnet} in {elapsed:.2f} s."
+            f"Scanned subnet {args.subnet} in {elapsed:.2f} s. "
             f"{responded_count} hosts are up, {timed_out_count} hosts are down."
         )
 
